@@ -21,7 +21,7 @@ export default function Series() {
 		if (id === undefined) return;
 		
         const getSeries = async () => {
-            await firebase.db.collection(id).onSnapshot(handleSnapshot);
+            await firebase.db.collection(id).orderBy("created", "asc").onSnapshot(handleSnapshot);
         }
         getSeries();
 	}, [id]);

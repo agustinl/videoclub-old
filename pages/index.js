@@ -74,6 +74,10 @@ export default function Home() {
                         }
                     </div>
                 </div>
+
+                <div className="border-t border-b border-red-700 text-white px-4 py-3 mt-10 w-1/2 mx-auto text-center" role="alert">
+                    <p className="text-sm"><a className="text-red-700 hover:underline" href="https://github.com/agustinl/videoclub">GitHub</a> &#8212; {new Date().getFullYear()} Videoclub</p>
+                </div>
             </Layout>
         </>
     );

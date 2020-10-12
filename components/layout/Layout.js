@@ -6,7 +6,7 @@ const Layout = props => {
         <>
             <Head>
                 <title>Videoclub</title>
-                <link rel="icon" href="/static/favicon.png" type="image/png" />
+                <link rel="icon" href="/favicon.png" type="image/png" />
                 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
             </Head>
 

@@ -10,7 +10,7 @@ const useSeries = (collection, order) => {
 
     useEffect(() => {
         const getSeries = async () => {
-            await firebase.db.collection(collection).orderBy(order, 'desc').onSnapshot(handleSnapshot);
+            await firebase.db.collection(collection).orderBy(order, 'desc').limit(10).onSnapshot(handleSnapshot);
         }
         getSeries();
 	}, []);
