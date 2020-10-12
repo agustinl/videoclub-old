@@ -1,6 +1,7 @@
 import { useState, useContext } from 'react';
 import Layout from "../components/layout/Layout";
 import Serie from "../components/ui/Serie";
+import Spinner from "../components/ui/Spinner";
 import Router from 'next/router';
 
 import { FirebaseContext } from '../firebase';
@@ -11,6 +12,7 @@ export default function Add() {
     const [search, setSearch] = useState('');
     const [error, setError] = useState("");
     const [sucess, setSucess] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
 
     const { user, firebase } = useContext(FirebaseContext);
 
@@ -22,6 +24,7 @@ export default function Add() {
         e.preventDefault();
 
         setSucess("");
+        setIsLoading(true);
 
         if(search.trim() === '') {
             setError("Serie name required");
@@ -34,6 +37,8 @@ export default function Add() {
         const res = await api.json();
 
         res.Response === "False" ? setError("Serie not found") : setSerie(res);
+
+        setIsLoading(false);
     }
 
     const addSerie = async () => {
@@ -111,10 +116,12 @@ export default function Add() {
                 }
             </form>
 
-            {/* <Spinner /> */}
+            {
+                isLoading ? ( <Spinner /> ) : null
+            }
 
             {
-                 Object.keys(serie).length > 0 ? (
+                Object.keys(serie).length > 0 && !isLoading ? (
                     <>
                         <Serie
                             serie={serie}
