@@ -1,5 +1,3 @@
-# Videoclub
-
 <img alt="Videoclub" src="https://raw.githubusercontent.com/agustinl/videoclub/master/public/static/logo-videoclub.png">
 
 Keep an updated list with information about the series you have been finishing.
