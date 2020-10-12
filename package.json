@@ -5,11 +5,20 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
   },
   "dependencies": {
+    "date-fns": "^2.16.1",
+    "firebase": "^7.23.0",
+    "firebase-admin": "^9.2.0",
     "next": "9.5.5",
     "react": "16.13.1",
     "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^3.0.0",
+    "autoprefixer": "^9.8.6",
+    "tailwindcss": "^1.8.13"
   }
 }
