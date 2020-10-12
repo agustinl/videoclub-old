@@ -10,7 +10,7 @@ export default function Header() {
         <nav className="flex items-center justify-between flex-wrap bg-black p-6">
             <div className="flex items-center flex-shrink-0 text-white mr-6 cursor-pointer">
                 <Link href="/">
-                    <img src="/static/logo-videoclub.png" />
+                    <img src="/static/logo-videoclub.png" alt="Videoclub" />
                 </Link>
             </div>
             <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">

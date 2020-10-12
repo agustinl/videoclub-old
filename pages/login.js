@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Link from "next/link";
 import Router from 'next/router';
+import Head from 'next/head';
 
 // Validations
 import useValidation from '../hooks/useValidation';
@@ -46,6 +47,13 @@ export default function Login() {
 	}
 
     return (
+        <>
+        <Head>
+            <title>Log In</title>
+            <link rel="icon" href="/favicon.png" type="image/png" />
+            <meta name="description" content="Keep an updated list with information about the series you have been finishing"></meta>
+        </Head>
+        
         <div className="flex h-screen justify-center items-center flex-col">
             <form
                 className="bg-black border border-gray-700 rounded px-8 pt-6 pb-6 mb-4"
@@ -55,6 +63,7 @@ export default function Login() {
                     <img
                         src="/static/logo-videoclub.png"
                         className="m-auto w-3/4"
+                        alt="Videoclub"
                     />
                 </div>
                 <div className="mb-4">
@@ -107,5 +116,6 @@ export default function Login() {
                 {new Date().getFullYear()} &#8212; Videoclub
             </p>
         </div>
+        </>
     );
 }

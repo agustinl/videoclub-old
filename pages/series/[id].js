@@ -1,5 +1,6 @@
 import { useEffect, useContext, useState } from 'react';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 import Layout from "../../components/layout/Layout";
 import Serie from "../../components/ui/Serie";
@@ -39,6 +40,7 @@ export default function Series() {
     }
 	
 	return(
+        <>
 		<Layout>
 			<h1 className="text-white text-2xl"><strong className="text-red-700">@{id}</strong> series list</h1>
 			<h2 className="text-white text-xl "><strong>{series.length}</strong> series watched</h2>
@@ -58,5 +60,6 @@ export default function Series() {
 				}
 			</div>
 		</Layout>
+		</>
 	);
 }
