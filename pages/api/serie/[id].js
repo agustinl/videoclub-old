@@ -3,8 +3,8 @@ export default async function userHandler(req, res)  {
       query: { id }
     } = req
 
-    const api = await fetch(`http://www.omdbapi.com/?apikey=${process.env.API_KEY}&t=${id}`);
-    const response = await api.json();  
+    const api = await fetch(`http://www.omdbapi.com/?apikey=${process.env.API_KEY}&t=${id}&type=series`);
+	const response = await api.json();
   
     res.status(200).json(response)
 }

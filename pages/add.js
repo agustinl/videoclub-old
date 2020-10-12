@@ -27,7 +27,7 @@ export default function Add() {
         setIsLoading(true);
 
         if(search.trim() === '') {
-            setError("Serie name required");
+            setError("Series name is required");
             return;
         }
 
@@ -85,7 +85,7 @@ export default function Add() {
                         className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none"
                         type="text"
                         id="search"
-                        placeholder="Serie"
+                        placeholder="Series name"
                         name="search"
                         value={search}
                         onChange={handleSearch}
