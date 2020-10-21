@@ -1,6 +1,5 @@
 import { useEffect, useContext, useState } from 'react';
 import { useRouter } from 'next/router';
-import Head from 'next/head';
 
 import Layout from "../../components/layout/Layout";
 import Serie from "../../components/ui/Serie";
@@ -54,6 +53,7 @@ export default function Series() {
 							<Serie
 								serie={serie}
 								key={serie.imdbID}
+								id={id}
 							/>
 						))
 					)

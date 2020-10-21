@@ -1,7 +1,7 @@
 import Header from './Header';
 import Head from 'next/head';
 
-const Layout = props => {
+export default function Layout (props) {
     return (
         <>
             <Head>
@@ -19,5 +19,3 @@ const Layout = props => {
         </>
     );
 }
- 
-export default Layout;

@@ -1,10 +1,40 @@
-export default function Serie({ serie }) {
+import { useContext } from 'react';
+import { FirebaseContext } from '../../firebase';
+import { useRouter } from 'next/router';
 
-    if ( Object.keys(serie).length === 0) return null
+export default function Serie({ serie, id }) {
+
+    if ( Object.keys(serie).length === 0) return null;
 
     const { Title, Year, Genre, Plot, Poster, imdbRating, imdbID, totalSeasons } = serie;
-
     const genres = Genre.split(",");
+    const { user, firebase } = useContext(FirebaseContext);
+    const router = useRouter();
+
+    const canDelete = () => {
+        if(!user) return false;
+
+        if(id === user.displayName) {
+            return true
+        }
+    }
+
+    const deleteSerie = async () => {
+
+        if(!user) {
+            return router.push('/login');
+        }
+
+        if(id !== user.displayName) {
+            return router.push('/');
+        }
+
+        try {
+            await firebase.db.collection(user.displayName).doc(imdbID).delete();
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
     return (
         <article
@@ -33,6 +63,12 @@ export default function Serie({ serie }) {
                     )
                 }
             </ul>
+            { canDelete() && 
+                <p
+                    className="float-left text-sm cursor-pointer text-red-700 font-semibold hover:underline"
+                    onClick={deleteSerie}
+                >&#215; Delete</p>
+            }
             <a href={`https://www.imdb.com/title/${imdbID}`} target="_blank" rel="noopener noreferrer" className="float-right text-sm text-red-700 font-semibold hover:underline">+ More Info</a>
         </div>
 

@@ -1,15 +1,16 @@
 <img alt="Videoclub" src="https://raw.githubusercontent.com/agustinl/videoclub/master/public/static/logo-videoclub.png">
 
-Keep an updated list with information about the series you have been finishing.
-Personal project to use the stack below. *It is not an application for mass use in production.*
+Keep an updated list with information about the series you have been finishing.  
+Personal project to use the stack below.  
+*It is not an application for mass use in production.*
 
-## How to use
+### How to use
 
 1. To use this project, clone the repository into your local.
 2. Add a **config.js** file into **firebase** folder with the keys of your firebase project.
 3. Add a **next.config.js** file into root folder with the **API_KEY** of your [OMDb API](http://www.omdbapi.com/apikey.aspx).
 
-## Stack
+### Stack
 
 - React Framework: [Next.js](https://nextjs.org/)
 - Authentication and database: [Firebase](https://firebase.google.com/)
