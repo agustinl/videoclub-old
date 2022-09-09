@@ -18,7 +18,7 @@ export default function Header() {
                     { user ? (
                         <Link href={`/series/${user.displayName}`}>
                         <a
-                            className="inline-block text-red-700 text-sm py-2 px-4 mt-4 lg:mt-0 hover:underline"
+                            className="inline-block text-nflix text-sm py-2 px-4 mt-4 lg:mt-0 hover:underline"
                         >
                             My List
                         </a>
@@ -33,10 +33,10 @@ export default function Header() {
                         >
                             <a 
                             onClick={() => firebase.logOut()}
-                            className="inline-block text-red-700 text-sm py-2 px-4 mt-4 lg:mt-0 hover:underline">Log Out</a>
+                            className="inline-block text-nflix text-sm py-2 px-4 mt-4 lg:mt-0 hover:underline">Log Out</a>
                         </Link>
                         <Link href="/add">
-                            <a className="inline-block bg-red-700 text-white text-sm py-2 px-4 rounded focus:outline-none mt-4 ml-2 lg:mt-0 hover:bg-red-800">
+                            <a className="inline-block bg-nflix text-white text-sm py-2 px-4 rounded focus:outline-none mt-4 ml-2 lg:mt-0 hover:bg-red-800">
                                 Add Series
                             </a>
                         </Link>
@@ -44,12 +44,12 @@ export default function Header() {
                     ) : (
                         <>
                         <Link href="/login">
-                            <a className="inline-block bg-red-700 text-white text-sm py-2 px-4 rounded focus:outline-none mt-4 ml-2 lg:mt-0 hover:bg-red-800">
+                            <a className="inline-block bg-nflix text-white text-sm py-2 px-4 rounded focus:outline-none mt-4 ml-2 lg:mt-0 hover:bg-red-800">
                                 Log In
                             </a>
                         </Link>
                         <Link href="/register">
-                            <a className="inline-block bg-red-700 text-white text-sm py-2 px-4 rounded focus:outline-none mt-4 ml-2 lg:mt-0 hover:bg-red-800">
+                            <a className="inline-block bg-nflix text-white text-sm py-2 px-4 rounded focus:outline-none mt-4 ml-2 lg:mt-0 hover:bg-red-800">
                                 Create account
                             </a>
                         </Link>

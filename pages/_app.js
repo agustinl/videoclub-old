@@ -1,4 +1,3 @@
-import '../styles.css';
 import '../styles/global.css';
 
 import firebase, { FirebaseContext } from "../firebase";

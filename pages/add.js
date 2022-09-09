@@ -100,18 +100,14 @@ export default function Add() {
                 </div>
 
                 {
-                    error != "" ? (
-                        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-3" role="alert">
-                            <span className="block sm:inline">{error}</span>
-                        </div>
+                    error != "" ? (                        
+                        <div className="px-4 py-3 mt-3 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:red-red-800" role="alert">{error}</div>
                     ) : null
                 }
 
                 {
                     sucess != "" ? (
-                        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mt-3" role="alert">
-                            <span className="block sm:inline">{sucess}</span>
-                        </div>
+                        <div className="px-4 py-3 mt-3 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:green-red-800" role="alert">{sucess}</div>
                     ) : null
                 }
             </form>

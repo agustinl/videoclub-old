@@ -75,7 +75,7 @@ export default function Register() {
                         onChange={handleChange}
                         onBlur={handleBlur}
                     />
-                    { errors.username && <p className="text-red-500 text-xs italic mt-1">{errors.username}</p> }
+                    { errors.username && <p className="text-nflix text-xs italic mt-1">{errors.username}</p> }
                 </div>
                 <div className="mb-4">
                     <input
@@ -88,7 +88,7 @@ export default function Register() {
                         onChange={handleChange}
                         onBlur={handleBlur}
                     />
-                    { errors.email && <p className="text-red-500 text-xs italic mt-1">{errors.email}</p> }
+                    { errors.email && <p className="text-nflix text-xs italic mt-1">{errors.email}</p> }
                 </div>
                 <div className="mb-6">
                     <input
@@ -101,11 +101,11 @@ export default function Register() {
                         onChange={handleChange}
                         onBlur={handleBlur}
                     />
-                    { errors.password && <p className="text-red-500 text-xs italic mt-1">{errors.password}</p> }
+                    { errors.password && <p className="text-nflix text-xs italic mt-1">{errors.password}</p> }
                 </div>
                 <div className="flex items-center justify-between flex-col">
                     <button
-                        className="bg-red-700 text-white py-2 px-4 rounded focus:outline-none mb-6 w-full hover:bg-red-800"
+                        className="bg-nflix text-white py-2 px-4 rounded focus:outline-none mb-6 w-full hover:bg-red-800"
                         type="submit"
                     >
                         Create account

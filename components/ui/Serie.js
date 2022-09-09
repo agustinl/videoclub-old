@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { FirebaseContext } from '../../firebase';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 export default function Serie({ serie, id }) {
 
@@ -39,9 +40,17 @@ export default function Serie({ serie, id }) {
     return (
         <article
             id={imdbID}
-            style={{backgroundImage: `url('${Poster}')`}}
+            //style={{backgroundImage: `url('${Poster}')`}}
             className="flex m-1 bg-cover bg-center relative transition duration-300"
         >
+            <Image
+                src={Poster}
+                alt={Title}
+                width="275"
+                height="405"
+                blurDataURL={Poster}
+                placeholder="blur"
+            />
 
         <div className="absolute clear-both bottom-0 text-white px-2 pb-2 z-10 opacity-0 hidden">
             <div className="flex items-center justify-between">
