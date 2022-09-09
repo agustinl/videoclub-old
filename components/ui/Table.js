@@ -6,11 +6,13 @@ const Table = ({ labels, data }) => {
 		<div class="overflow-x-auto relative">
 			<table class="w-full text-sm text-left text-gray-300">
 				<thead class="text-xs text-gray-300 uppercase bg-neutral-900">
-                    {labels.map((label) => (                            
-                        <th scope="col" class="py-3 px-6" key={label.id}>
-                            {label.name}
-                        </th>
-					))}
+                    <tr>
+                        {labels.map((label) => (                            
+                            <th scope="col" class="py-3 px-6" key={label.id}>
+                                {label.name}
+                            </th>
+                        ))}
+                    </tr>
 				</thead>
 				<tbody>
 					{data.map((serie) => (

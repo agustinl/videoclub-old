@@ -9,7 +9,7 @@ Personal project to use the stack below.
 ### How to use
 
 1. To use this project, clone the repository into your local.
-2. Add a **config.js** file into **firebase** folder with the keys of your firebase project:
+2. Edit the **config.js** file into **firebase** folder with the keys of your firebase project:
 
 ```javascript
 const firebaseConfig = {
