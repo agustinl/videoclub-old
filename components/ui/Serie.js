@@ -3,6 +3,10 @@ import { FirebaseContext } from '../../firebase';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 
+const loaderProp =({ src }) => {
+    return src;
+}
+
 export default function Serie({ serie, id }) {
 
     if ( Object.keys(serie).length === 0) return null;
@@ -50,6 +54,7 @@ export default function Serie({ serie, id }) {
                 height="405"
                 blurDataURL={Poster}
                 placeholder="blur"
+                loader={loaderProp}
             />
 
         <div className="absolute clear-both bottom-0 text-white px-2 pb-2 z-10 opacity-0 hidden">
