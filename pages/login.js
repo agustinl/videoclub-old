@@ -79,7 +79,7 @@ export default function Login() {
                         value={email}
                         onChange={handleChange}
                     />
-                    { errors.email && <p className="text-red-500 text-xs italic mt-1">{errors.email}</p> }
+                    { errors.email && <p className="text-nflix text-xs italic mt-1">{errors.email}</p> }
                 </div>
                 <div className="mb-6">
                     <input
@@ -91,13 +91,13 @@ export default function Login() {
                         value={password}
                         onChange={handleChange}
                     />
-                    { errors.password && <p className="text-red-500 text-xs italic mt-1">{errors.password}</p> }
+                    { errors.password && <p className="text-nflix text-xs italic mt-1">{errors.password}</p> }
                     
-                    { error && <p className="text-red-500 text-xs italic mt-1">{error}</p> }
+                    { error && <p className="text-nflix text-xs italic mt-1">{error}</p> }
                 </div>
                 <div className="flex items-center justify-between flex-col">
                     <button
-                        className="bg-red-700 text-white py-2 px-4 rounded focus:outline-none w-full mb-6 hover:bg-red-800"
+                        className="bg-nflix text-white py-2 px-4 rounded focus:outline-none w-full mb-6 hover:bg-red-800"
                         type="submit"
                     >
                         Sign In
