@@ -101,13 +101,13 @@ export default function Add() {
 
                 {
                     error != "" ? (                        
-                        <div className="px-4 py-3 mt-3 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:red-red-800" role="alert">{error}</div>
+                        <div className="px-4 py-3 mt-3 text-sm text-red-700 bg-red-100 rounded-lg" role="alert">{error}</div>
                     ) : null
                 }
 
                 {
                     sucess != "" ? (
-                        <div className="px-4 py-3 mt-3 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:green-red-800" role="alert">{sucess}</div>
+                        <div className="px-4 py-3 mt-3 text-sm text-green-700 bg-green-100 rounded-lg" role="alert">{sucess}</div>
                     ) : null
                 }
             </form>

@@ -2,12 +2,12 @@ import Link from "next/link";
 
 const Footer = () => {
 	return (
-		<footer className="p-4 bg-transparent rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-900">
+		<footer className="p-4 bg-transparent rounded-lg shadow md:px-6 md:py-8">
 			<div className="sm:flex sm:items-center sm:justify-between">
 				<Link href="/">
 					<img src="/static/logo-videoclub.png" alt="Videoclub" className="mr-3 h-6" />
 				</Link>
-				<ul className="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
+				<ul className="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0">
 					<li>
 						<a
 							href="https://github.com/agustinl/videoclub"
@@ -18,8 +18,8 @@ const Footer = () => {
 					</li>
 				</ul>
 			</div>
-			<hr className="my-6 border-neutral-800 sm:mx-auto dark:border-gray-700 lg:my-8" />
-			<span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
+			<hr className="my-6 border-neutral-800 sm:mx-auto lg:my-8" />
+			<span className="block text-sm text-gray-500 sm:text-center">
 				{new Date().getFullYear()} Videoclub
 			</span>
 		</footer>
